@@ -73,7 +73,8 @@ For more usage information, please run:
 ./des -h
 ```
 
-Note: The program prints the input and resulting output in hex to stderr.
+> [!NOTE]  
+> The program prints the input and resulting output in hex to `stderr`.
 
 ## Contributing
 

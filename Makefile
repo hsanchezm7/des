@@ -25,7 +25,8 @@ OBJ_DEBUG := $(addprefix $(DBG_PATH)/, $(addsuffix .o, $(notdir $(basename $(SRC
 
 # clean files list
 DISTCLEAN_LIST := $(OBJ) \
-                  $(OBJ_DEBUG)
+                  $(OBJ_DEBUG) \
+				  
 CLEAN_LIST := $(TARGET) \
 			  $(TARGET_DEBUG) \
 			  $(DISTCLEAN_LIST)
@@ -71,6 +72,6 @@ MESSAGE := "0123456789ABCDEF"
 KEY := "0123456789ABCDEF"
 
 .PHONY: test
-test: $(TARGET)
+test: makedir $(TARGET)
 	@echo "Running default encryption test..."
 	@$(TARGET) -e -m $(MESSAGE) -k $(KEY)
